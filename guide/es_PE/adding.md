@@ -1,8 +1,8 @@
-# Adding your module to the userguide
+# Agregando tu modulo a la guia de usuario
 
-Making your module work with the userguide is simple.
+Hacer que tu modulo trabaje con la guia de usuario es simple.
 
-First, copy this config and place in it `<module>/config/userguide.php`, replacing anything in `<>` with the appropriate things:
+Primero, copia esta configuración y colocalo en `<module>/config/userguide.php`, remplaza los campos en `<>` con los apropiados valores:
 
 	return array
 	(
@@ -41,7 +41,7 @@ First, copy this config and place in it `<module>/config/userguide.php`, replaci
 		)
 	);
 
-Next, create a folder in your module directory called `guide/<modulename>` and create `index.md` and `menu.md`.  All userguide pages use [Markdown](markdown).  The index page is what is shown on the index of your module, the menu is what shows up in the side column.  The menu should be formatted like this:
+Siguiente, crea un folder en tu directorio module llamado `guide/<modulename>` y crea `index.md` y `menu.md`. Todas las pagina de la guia de usuario usan [Markdown](markdown). La archivo index es el que se mostrara en el index de tu modulo, el archivo menu es el que se mostrara en la columna lateral. El menu debera ser formateado de la siguiente manera:
 
 	## [Module Name]()
 	 - [Page name](page-path)
@@ -52,4 +52,4 @@ Next, create a folder in your module directory called `guide/<modulename>` and c
 	 - Categories do not have to be a link to a page
 		 - [Etcetera](etc)
 
-Page paths are relative to `guide/<modulename>`.  So `[Page name](path-path)` would look for `guide/<modulename>/page-name.md` and `[Another](category/another)` would look for `guide/<modulename>/page-name.md`.   The guide pages can be named or arranged any way you want within that folder (with the exception of `menu.md` and `index.md`). The breadcrumbs and page titles are pulled from the `menu.md file`, not the file names or paths.  You can have items that are not pages (a category that doesn't have a corresponding page).  To link to the `index.md` page, you should have an empty link, e.g. `[Module Name]()`.  Do not include `.md` in your links.  
+Las rutas de las paginas son relativas a `guide/<modulename>`.  Entonces `[Page name](path-path)` se vera `guide/<modulename>/page-name.md` y `[Another](category/another)` se vera `guide/<modulename>/page-name.md`.   The guide pages can be named or arranged any way you want within that folder (with the exception of `menu.md` and `index.md`). The breadcrumbs and page titles are pulled from the `menu.md file`, not the file names or paths.  You can have items that are not pages (a category that doesn't have a corresponding page).  To link to the `index.md` page, you should have an empty link, e.g. `[Module Name]()`.  Do not include `.md` in your links.  
